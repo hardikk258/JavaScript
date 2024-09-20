@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON basics conversions</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let obj={
+        name: "hardik",
+        age: "200",
+        gender: "male",
+    }
+    console.log(obj)
+    console.log(typeof(obj))
+
+    let jsonstr=JSON.stringify(obj)    //convert object to JSON string
+    console.log(jsonstr) 
+    console.log(typeof(jsonstr))
+
+    jsonstr=jsonstr.replace('hardik', 'sarthak');  // string operations can be done
+    console.log(jsonstr)
+    
+    let jsonobj=JSON.parse(jsonstr)  // convert JSON string to object only, 
+    console.log(jsonobj)             // cannot convert normal string to object
+    console.log(typeof(jsonobj))
+
+</script>
+</html>
